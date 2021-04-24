@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css"
+    />
+    <title>Book List App</title>
+  </head>
+  <body>
+    <header class="container">
+      <div class="flex justify-center text-center text-5xl p-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-12 w-12 mr-2 text-blue-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+          />
+        </svg>
+        <h5 class="text-gray-700">
+          My <span class="text-blue-400">Book</span> List
+        </h5>
+      </div>
+    </header>
+    <!-- section strats from here -->
+    <section>
+      <div class="p-4">
+        <form action="#">
+          <div class="mb-4">
+            <label class="text-gray-800" for="title">Title</label><br />
+            <input class="w-full h-8 border-2" type="text" id="title" />
+          </div>
+          <div class="mb-4">
+            <label class="text-gray-800" for="author">Author</label><br />
+            <input class="w-full h-8 border-2" type="text" id="author" />
+          </div>
+          <div class="mb-4">
+            <label class="text-gray-800" for="isbn">ISBN</label><br />
+            <input class="w-full h-8 border-2" type="number" id="isbn" />
+          </div>
+          <div>
+            <input
+              type="submit"
+              id="clicked"
+              class="w-full p-2 bg-blue-400 text-white cursor-pointer hover:bg-blue-300"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="mt-4 p-2 text-center">
+        <!-- table content starts from here -->
+        <table class="table-auto border-separate">
+          <thead class="text-gray-800">
+            <tr>
+              <th class="w-1/2">Title</th>
+              <th class="w-1/4">Author</th>
+              <th class="w-1/4">ISBN</th>
+            </tr>
+          </thead>
+          <tbody id="data" class="m-12"></tbody>
+        </table>
+      </div>
+    </footer>
+    <!-- javascript file attached here -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
